@@ -1,0 +1,22 @@
+canvas{
+    display:block;
+    vertical-align:bottom;
+   // background:rgba(0,0,0,0.1);
+  }
+  
+  
+  
+  
+  /* ---- particles.js container ---- */
+  
+  #particles-js{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 10;
+    
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  

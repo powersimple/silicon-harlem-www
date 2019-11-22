@@ -1,0 +1,66 @@
+/*Theme Name: siliconharlem
+Author: Ben Erwin, Powersimple, LLC
+Author URI: https://Powersimple/
+Description: 
+Text Domain: metrika
+
+Metrika is based on Underscores http: //underscores.me/, (C) 2012-2013 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of Eric Meyer http: //meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http: //necolas.github.com/normalize.css/
+and Blueprint http: //www.blueprintcss.org/
+
+THIS IS SASS 
+DO NOT EDIT IN STYLE.CSS OR YOU WILL LOSE YOUR CHANGES/
+EDIT IN app/sass/ *.scss
+
+*/
+/* PUT YOUR COLOR PALETTE HERE:
+*/
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,600i,700,900");
+.outer-wrapper h1 { font-size: 2.5em; line-height: 150% !important; }
+.outer-wrapper h3, .outer-wrapper p { margin-bottom: 1em; }
+@media screen and (max-width: 650px) { .outer-wrapper .container { padding: 1em; } }
+
+#header { position: fixed; top: 0; z-index: 100; }
+
+@media (min-width: 1170px) { .page-navi { margin: 35px 30px 0px -85px; } }
+h4 { font-style: italic; }
+
+@media screen and (max-width: 650px) { .og-fullimg { display: block; width: 100%; height: auto; }
+  .og-fullimg img { width: 100%; height: auto; }
+  .content-block p { padding: 0px 2em; } }
+.tw-feed { position: fixed; bottom: 0; left: 0; margin: 0; background: rgba(0, 0, 0, 0.2); display: none; }
+
+address { display: inline; color: #ccc; }
+
+a { color: #ccc; }
+
+.first_name, .last_name, .half-width-input { width: 49%; margin-right: 1%; display: inline; }
+
+article { background-size: cover !important; }
+
+.logo img { cursor: pointer; }
+
+.page-header { width: 400px; }
+
+.nav-header { z-index: 1000; }
+
+.outer-wrapper { padding-top: 45px; }
+@media (max-width: 767px) { .outer-wrapper { padding-top: 125px; } }
+
+#header .container { margin-top: -45px; }
+
+header { margin-bottom: 0px; }
+
+@media (min-width: 768px) { section.interior { padding-top: 100px; } }
+
+.home-slide { padding-top: 125px; }
+
+#logo { position: absolute; z-index: 1000; width: 200px; top: 0; right: 0px; cursor: pointer; }
+#logo .social-bar-white { margin-top: -10px; right: 15px; }
+@media (max-width: 767px) { #logo .social-bar-white { margin-top: 125px; } }
+
+body { background-color: #333; position: relative; }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIiwic291cmNlcyI6WyJzdHlsZS5jc3MiXSwiZmlsZSI6InN0eWxlLmNzcyJ9 */

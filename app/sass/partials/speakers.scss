@@ -1,0 +1,242 @@
+.speaker-listing {
+    border-top: 1px dashed #ccc;
+    padding-top: 25px;
+    margin-top: 5px;
+    a {}
+    div {
+        display: inline-block;
+        vertical-align: top;
+    }
+    .speaker-image {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+.panel-body {
+    p {
+        @media(max-width: 539px) {
+            font-size: 3vw;
+        }
+        @media(min-width:540px) and (max-width:767px) {
+            font-size: 2.5vw;
+        }
+        @media(min-width:768px) and (max-width:1280px) {
+            font-size: 1em;
+        }
+        @media(min-width:1281px) and (max-width:1680px) {
+            font-size: 1.2em;
+        }
+        @media(min-width:1681px) {
+            // font-size: 80%;
+        }
+    }
+}
+
+.speaker-image {
+    overflow: hidden;
+    background: $dark_blue;
+    border: 6px solid $dark_blue;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    float: left;
+    border-radius: 38.8%;
+    padding: 0px;
+}
+
+.affiliation {
+    font-size: 70%;
+    line-height: 120%;
+    display: block!important;
+    @media(max-width: 768px) {
+        margin-bottom: 10px;
+        margin-right: 1em;
+    }
+}
+
+.speaker-info {
+    font-size: 120%;
+    //border-bottom: 1px solid $darkest_blue;
+    margin-bottom: 15px;
+    @media(max-width: 600px) {
+        width: 100%;
+    }
+    strong {
+        font-weight: 700;
+        font-size: 120%;
+        line-height: 120%;
+        color: $darkest_blue;
+    }
+    .fa {
+        border-radius: 50%;
+        text-align: center;
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+        padding: 3px 4px;
+        color: #555;
+    }
+    a.fa:hover {
+        color: #000;
+    }
+    p,
+    li {
+        width: 57%;
+        font-size: 120%;
+    }
+}
+
+.speakers {
+    margin-bottom: 25px;
+}
+
+.speakers-page .speaker-info {
+    .social {
+        bottom: 0px;
+        display: table;
+        width: auto;
+        margin: 0px auto;
+        padding: 10px 0px 5px;
+        a {
+            display: table-cell;
+            text-align: center;
+        }
+    }
+}
+
+a.read-more {
+    color: $dark_blue;
+    text-decoration: underline;
+}
+
+a.read-more:hover {
+    color: $green;
+    text-decoration: underline;
+}
+
+.speaker-vitals {
+    line-height: 150%;
+    display: table-cell;
+    height: 125px;
+    @media(max-width: 1280px) {
+        font-size: 80%;
+    }
+    padding: 0px;
+    text-align: center;
+    strong {
+        display: block;
+    }
+    x .social listing a {
+        color: #555;
+    }
+}
+
+a:hover {
+    color: $dark_blue;
+}
+
+.speaker-excerpt {}
+
+.speaker-long-bio {
+    margin: 70px auto;
+    max-width: 1680px;
+    h2 {
+        margin-top: 70px;
+        margin-bottom: 0px;
+    }
+    .speaker-vitals {
+        width: 300px;
+        display: inline-block;
+        text-align: center;
+        margin: 15px 0px;
+        strong {
+            display: block;
+        }
+    }
+    .speaker-image {
+        max-width: 300px;
+        max-height: 300px;
+        margin: 0px auto;
+        width: 300px;
+        height: 300px;
+        border: 6px solid #12133c;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.speaker-name {
+    color: #fff;
+}
+
+#speakers {
+    .speaker-image {
+        margin: 0px auto;
+        float: none;
+        display: block;
+    }
+    .speaker-vitals {
+        text-align: center;
+        width: 100%;
+    }
+    h2.module-title {
+        color: $dark_blue;
+    }
+    p,
+    li {
+        color: $darkest_blue;
+    }
+}
+
+.speaker-info {
+    padding-left: 15px;
+}
+
+.speaker-list {
+    ul {
+        padding-left: 0px;
+        li {
+            list-style: none;
+        }
+    }
+    .excerpt {}
+}
+
+#speaker-vitals {
+    border-radius: 10px;
+    color: #11233c;
+    img {
+        display: block;
+        margin: 0px auto;
+        max-width: 300px;
+        border-radius: 25px;
+        width: 100%;
+    }
+    h4 {
+        font-weight: 700;
+        font-size: 150%;
+        color: $blue;
+        @media(min-width: 768px) {
+            text-align: left;
+        }
+    }
+    .social {
+        margin: 5px;
+        a {
+            color: $dark_blue !important;
+            font-size: 120% !important;
+            margin-right: 10px;
+        }
+        a:hover {
+            color: $blue !important;
+        }
+    }
+}
+
+.speaker-listing a {
+    color: $blue !important;
+    font-size: 120% !important;
+}
