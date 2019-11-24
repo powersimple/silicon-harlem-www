@@ -5,7 +5,7 @@
  * @package Metrika
  */
 ?>
-	<div id="secondary" class="widget-area span3" role="complementary">
+	<div id="secondary" class="widget-area span4" role="complementary">
 		<?php do_action( 'before_sidebar' ); ?>
 		<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 

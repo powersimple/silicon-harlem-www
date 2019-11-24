@@ -118,7 +118,11 @@ function Metrika_scripts() {
     
     wp_register_style( 'Metrika-icon-font', get_template_directory_uri() . '/css/font-awesome.min.css', array(), false );
     wp_register_style( 'Metrika-custom', get_template_directory_uri() . '/css/custom.css', array(), false );
+//BOOTSTRAP 4 messes up metrika
+//    wp_register_style( 'Metrika-bootstrap', get_template_directory_uri() . '/css/bootstrap.4.3.1.css', array(), false );
     wp_register_style( 'Metrika-bootstrap', get_template_directory_uri() . '/css/bootstrap.css', array(), false );
+   
+    
     wp_register_style( 'Metrika-animations', get_template_directory_uri() . '/css/animations.css', array(), false );
     wp_register_style( 'Metrika-wp-style', get_template_directory_uri() . '/css/wp-style.css', array(), false );
     wp_register_style( 'Metrika-bootstrap-js-css', get_template_directory_uri() . '/css/bootstrap-js-css.css', array(), false );
@@ -350,4 +354,4 @@ require get_template_directory() . '/inc/menu-helper.php';
 */
 require get_template_directory() . '/functions/metaboxes.php';
 require get_template_directory() . '/functions/media.php';
-
+require get_template_directory() . '/functions/press.php';

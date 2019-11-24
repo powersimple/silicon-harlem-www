@@ -1,0 +1,53 @@
+.list{
+    padding-left:0px;
+    li{
+        list-style: none;
+       
+        vertical-align: top;
+        padding:1em;
+        span.article-author{
+            font-size:10px;
+            color:#ccc;
+        }
+        span.article-publication{
+            font-size:14px;
+            color:#ccc;
+        }
+        span.press-date{
+            font-size:12px;
+            color:#ccc;
+
+        }
+        span.categories{
+            font-size:8px;
+            color:#ccc;
+
+        }
+        span.tags{
+            font-size:8px;
+            color:#ccc;
+
+        }
+        span.meta{
+            display: block;
+        }
+        span.article-link{
+            display:table-cell;
+            padding-left:1em;
+            font-size:16px;
+            
+        }
+        span.press-thumbnail{
+            width:150px;
+            display:table-cell;
+            vertical-align: top;
+            img{
+                border-radius:10px;
+
+            }
+        }
+
+    }
+
+
+}

@@ -37,6 +37,77 @@ function selectScreenImage( $meta_boxes ) {
 }
 add_filter( 'rwmb_meta_boxes', 'selectScreenImage' );
 
+function colorPicker( $meta_boxes ) {
+	$prefix = 'prefix-';
+
+	$meta_boxes[] = array(
+		'id' => 'color_picker',
+		'title' => esc_html__( 'Page Color', 'metabox-online-generator' ),
+		'post_types' => array('post', 'page' ),
+		'context' => 'advanced',
+		'priority' => 'default',
+		'autosave' => 'false',
+		'fields' => array(
+			array(
+				'id' => 'post_color',
+				'name' => esc_html__( 'Color Picker', 'metabox-online-generator' ),
+				'type' => 'color',
+			),
+		),
+	);
+
+	return $meta_boxes;
+}
+add_filter( 'rwmb_meta_boxes', 'colorPicker' );
+
+function setPressDetails( $meta_boxes ) {
+	$prefix = '';
+				
+	$now = new DateTime();
+	$meta_boxes[] = array(
+		'id' => 'details',
+		'title' => esc_html__( 'Press Details', 'metabox-online-generator' ),
+		'post_types' => array( 'press' ),
+		'context' => 'side',
+		'priority' => 'default',
+		'autosave' => false,
+		'fields' => array(
+			array(
+				'id' => 'press_date',
+				'type' => 'date',
+				'name' => esc_html__( 'Press Date', 'metabox-online-generator' ),
+				'std' => $now->getTimestamp(),
+				'desc' => esc_html__( 'Set the date of the news', 'metabox-online-generator' ),
+				'timestamp' => 'true',
+			),
+			array(
+				'id' => 'article_url',
+				'type' => 'url',
+				'name' => esc_html__( 'Article URL', 'metabox-online-generator' ),
+			),
+			array(
+				'id' => 'article_author',
+				'type' => 'text',
+				'name' => esc_html__( 'Article Author(s)', 'metabox-online-generator' ),
+			),
+			array(
+				'id' => 'article_publication',
+				'type' => 'text',
+				'name' => esc_html__( 'Publication', 'metabox-online-generator' ),
+			),
+			array(
+				'id' => 'video_embed_url',
+				'type' => 'url',
+				'name' => esc_html__( 'Video Embed URL', 'metabox-online-generator' ),
+			),
+		),
+	);
+
+	return $meta_boxes;
+}
+add_filter( 'rwmb_meta_boxes', 'setPressDetails' );
+
+
 
 function setSessionDetails( $meta_boxes ) {
 	$prefix = '';

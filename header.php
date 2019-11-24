@@ -35,13 +35,19 @@ else
 <?php wp_head(); ?>
 </head>
 <?php
-$color = '#d06e39';
+if($post_color = @get_post_meta($id,"post_color",true)){
+    $color = $post_color;
+} else {
+    $color = '#d06e39';
+
+}
+
 $preloader = '#0fa2cb';
 if (!$metrika_type){
     if (isset($metrika_options['color'])) {
         $color = $metrika_options['color'];
     } else {
-        $color = '#d06e39';
+      print  $color = '#d06e39';
     }
     $overflow = 'style="overflow: auto;"';
 } else {
@@ -122,7 +128,7 @@ if ($other['link_color'] != '#ffffff') {
         background-color: <?php echo $color; ?>;
     }
 </style>
-<body <?php body_class(); echo $overflow;?>>
+<body <?php body_class(); ?>>
     <?php if (!empty($other['preloader']) && $other['preloader'] == 'true') :  ?>
     <div id="preloader">
         <div id="canvasloader-container" class="wrapper"></div>

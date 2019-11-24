@@ -63,6 +63,7 @@ add_shortcode('col4', 'col4_shortcode');
 /*
  * Team Shortcode
  */
+/*
 function team_shortcode($attr) {
     extract(shortcode_atts(array(
         'column' => 3
@@ -123,7 +124,7 @@ function team_shortcode($attr) {
     return $output;
 }
 add_shortcode('team', 'team_shortcode');
-
+*/
 /*
  * Social Icon Shortcode
  */

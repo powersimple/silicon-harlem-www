@@ -1,7 +1,7 @@
 <?php
 function posts_type() {
     
-    register_post_type( 'team',
+ /*   register_post_type( 'team',
         array(
             'labels'            => array(
                 'name'               => __( 'Team', 'metrika' ),
@@ -20,14 +20,42 @@ function posts_type() {
                 'editor'
                 ),
         ));
+*/
+    register_post_type( 'press',
+        array(
+            'labels' => array(
+            'name' => __( 'Press', 'metrika' ),
+            'singular_name' => __( 'Press', 'metrika' ),
+            'all_items' => __('Press List', 'metrika'),
+            'has_archive' => true,
+            'show_ui' => true,
+            'add_new' => 'Add Press',
+            'not_found' => 'No found.',
+            'not_found_in_trash' => 'In the cart slides found',
+            'add_new_item' => 'Add Press Item'
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'supports' => array(
+                'title',
+                'content',
+                'thumbnail',
+                'editor',
+                'excerpt'
+            ),
+            'show_ui' => true,
+            'taxonomies' => array('post_tag','category')
+        ));
+
+        
     register_post_type( 'works',
         array(
             'labels' => array(
-            'name' => __( 'Works', 'metrika' ),
-            'singular_name' => __( 'Work', 'metrika' ),
-            'all_items' => __('Work List', 'metrika'),
+            'name' => __( 'What We Do', 'metrika' ),
+            'singular_name' => __( 'What we do', 'metrika' ),
+            'all_items' => __('List of We Do', 'metrika'),
             'has_archive' => true,
-            'add_new' => 'Add New',
+            'add_new' => 'Add New What We do',
             'not_found' => 'No found.',
             'not_found_in_trash' => 'In the cart slides found',
             'add_new_item' => 'Add New Work'
@@ -37,18 +65,19 @@ function posts_type() {
             'supports' => array(
                 'title',
                 'thumbnail',
-                'editor'
+                'editor',
+                'content'
             ),
         ));
         
         register_post_type( 'program',
         array(
             'labels' => array(
-            'name' => __( 'Programs', 'metrika' ),
-            'singular_name' => __( 'Works', 'metrika' ),
+            'name' => __( 'Education', 'metrika' ),
+            'singular_name' => __( 'Education Program', 'metrika' ),
             'all_items' => __('Program List', 'metrika'),
             'has_archive' => true,
-            'add_new' => 'Add New',
+            'add_new' => 'Add New Program',
             'not_found' => 'No found.',
             'not_found_in_trash' => 'In the cart slides found',
             'add_new_item' => 'Add New Program'
@@ -58,8 +87,11 @@ function posts_type() {
             'supports' => array(
                 'title',
                 'thumbnail',
-                'editor'
+                'editor',
+                'content'
             ),
+            'show_ui' => true,
+            'taxonomies' => array('post_tag','category')
         ));
         register_post_type( 'event',
         array(
@@ -78,8 +110,11 @@ function posts_type() {
             'supports' => array(
                 'title',
                 'thumbnail',
-                'editor'
+                'editor',
+                'content'
             ),
+            'show_ui' => true,
+            'taxonomies' => array('post_tag','category')
         ));
 }
 add_action( 'init', 'posts_type' );
