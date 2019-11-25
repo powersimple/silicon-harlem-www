@@ -20,7 +20,7 @@ EDIT IN app/sass/ *.scss
 /*
     PUT YOUR COLOR PALETTE HERE:
 */
-@import "partials/press";
+@import "partials/posts";
 
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600i,700,900');
 //@import "partials/colors";
@@ -164,4 +164,9 @@ body{
 .single-post-content {
     padding-top:50px;
 }
-  
+
+
+
+#secondary aside a{
+    display: inline-block;
+}
