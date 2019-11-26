@@ -67,7 +67,7 @@ function setPressDetails( $meta_boxes ) {
 	$meta_boxes[] = array(
 		'id' => 'details',
 		'title' => esc_html__( 'Press Details', 'metabox-online-generator' ),
-		'post_types' => array( 'press' ),
+		'post_types' => array( 'post','press' ),
 		'context' => 'side',
 		'priority' => 'default',
 		'autosave' => false,
