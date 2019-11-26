@@ -139,7 +139,7 @@ function Metrika_scripts() {
     
 
     if( !is_admin()){
-        wp_register_script('jquery-migrate', ("http://code.jquery.com/jquery-migrate-1.2.1.min.js"), false, false, true);
+        wp_register_script('jquery-migrate', ("https://code.jquery.com/jquery-migrate-1.2.1.min.js"), false, false, true);
         wp_enqueue_script('jquery');
     }
 
@@ -148,7 +148,7 @@ function Metrika_scripts() {
     $work_full .= '<div class="full_bg"></div>';
     $work_full .= '
         <div id="work-loader" class="wrapper"></div>
-        <script src="http://heartcode-canvasloader.googlecode.com/files/heartcode-canvasloader-min-0.9.1.js"></script>
+        <script src="'.get_template_directory_uri() .'/js/heartcode-canvasloader.js'.get_template_directory_uri() .'/js/heartcode-canvasloader.js"></script>
         <script type="text/javascript">
             setTimeout(function() {
                 var cl = new CanvasLoader("work-loader");
@@ -253,7 +253,7 @@ add_action('admin_enqueue_scripts', 'load_metrika_admin_style');
  */
 function metrika_login_js() {
     wp_enqueue_script( 'metrika-login', get_template_directory_uri() . '/js/login.js', array('jquery'), false );
-    echo "<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>";
+    echo "<link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>";
 }
 
 add_action('login_head', 'metrika_login_js');
